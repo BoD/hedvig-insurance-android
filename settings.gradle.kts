@@ -4,6 +4,9 @@ pluginManagement {
   includeBuild("build-logic")
   includeBuild("lokalise-gradle-plugin")
   repositories {
+    maven {
+      url = uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
+    }
     google()
     gradlePluginPortal()
   }
@@ -12,6 +15,9 @@ pluginManagement {
 dependencyResolutionManagement {
   repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
   repositories {
+    maven {
+      url = uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
+    }
     google()
     mavenCentral()
     maven("https://jitpack.io")
