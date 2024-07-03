@@ -55,6 +55,25 @@ apollo { // Octopus client
 //      ),
 //    )
 
+    isADependencyOf(project(":data-chat-read-timestamp-public"))
+    isADependencyOf(project(":data-paying-member"))
+    isADependencyOf(project(":data-termination"))
+    isADependencyOf(project(":feature-chat"))
+    isADependencyOf(project(":feature-claim-details"))
+    isADependencyOf(project(":feature-connect-payment-trustly"))
+    isADependencyOf(project(":feature-delete-account"))
+    isADependencyOf(project(":feature-edit-coinsured"))
+    isADependencyOf(project(":feature-help-center"))
+    isADependencyOf(project(":feature-home"))
+    isADependencyOf(project(":feature-insurances"))
+    isADependencyOf(project(":feature-payments"))
+    isADependencyOf(project(":feature-profile"))
+    isADependencyOf(project(":feature-travel-certificate"))
+    isADependencyOf(project(":forever-ui"))
+    isADependencyOf(project(":language-data"))
+    isADependencyOf(project(":member-reminders-public"))
+    isADependencyOf(project(":notification-badge-data-public"))
+
     // https://www.apollographql.com/docs/android/advanced/operation-variables/#make-nullable-variables-non-optional
     generateOptionalOperationVariables.set(false)
     outputDirConnection {
