@@ -14,9 +14,8 @@ android {
 }
 
 dependencies {
-  apolloMetadata(projects.apolloOctopusPublic)
 
-  implementation(libs.accompanist.pagerIndicators)
+    implementation(libs.accompanist.pagerIndicators)
   implementation(libs.accompanist.permissions)
   implementation(libs.androidx.compose.foundation)
   implementation(libs.androidx.compose.material3)
@@ -89,5 +88,6 @@ apollo {
   service("octopus") {
     packageName.set("octopus")
     generateDataBuilders.set(true)
+      dependsOn(projects.apolloOctopusPublic)
   }
 }

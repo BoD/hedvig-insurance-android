@@ -13,9 +13,8 @@ android {
 }
 
 dependencies {
-  apolloMetadata(projects.apolloOctopusPublic)
 
-  implementation(libs.accompanist.permissions)
+    implementation(libs.accompanist.permissions)
   implementation(libs.androidx.activity.compose)
   implementation(libs.androidx.compose.material3.windowSizeClass)
   implementation(libs.androidx.compose.runtime)
@@ -79,5 +78,6 @@ dependencies {
 apollo {
   service("octopus") {
     packageName.set("octopus")
+      dependsOn(projects.apolloOctopusPublic)
   }
 }

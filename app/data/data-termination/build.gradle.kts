@@ -6,9 +6,8 @@ plugins {
 }
 
 dependencies {
-  apolloMetadata(projects.apolloOctopusPublic)
 
-  implementation(libs.apollo.normalizedCache)
+    implementation(libs.apollo.normalizedCache)
   implementation(libs.apollo.runtime)
   implementation(libs.arrow.core)
   implementation(libs.koin.core)
@@ -24,5 +23,6 @@ dependencies {
 apollo {
   service("octopus") {
     packageName.set("octopus")
+      dependsOn(projects.apolloOctopusPublic)
   }
 }

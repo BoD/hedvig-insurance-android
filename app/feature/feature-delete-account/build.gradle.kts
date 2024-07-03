@@ -8,9 +8,8 @@ plugins {
 }
 
 dependencies {
-  apolloMetadata(projects.apolloOctopusPublic)
 
-  implementation(libs.androidx.datastore.core)
+    implementation(libs.androidx.datastore.core)
   implementation(libs.androidx.datastore.preferencesCore)
   implementation(libs.androidx.lifecycle.compose)
   implementation(libs.androidx.navigation.common)
@@ -42,5 +41,6 @@ apollo {
   service("octopus") {
     packageName.set("octopus")
     generateDataBuilders.set(true)
+      dependsOn(projects.apolloOctopusPublic)
   }
 }

@@ -6,9 +6,8 @@ plugins {
 }
 
 dependencies {
-  apolloMetadata(projects.apolloOctopusPublic)
 
-  api(libs.kotlinx.datetime)
+    api(libs.kotlinx.datetime)
 
   implementation(libs.androidx.datastore.core)
   implementation(libs.androidx.datastore.preferencesCore)
@@ -49,5 +48,6 @@ apollo {
   service("octopus") {
     packageName.set("octopus")
     generateDataBuilders.set(true)
+      dependsOn(projects.apolloOctopusPublic)
   }
 }
